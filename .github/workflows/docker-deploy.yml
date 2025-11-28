@@ -15,11 +15,12 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: "abdulkarim31662"
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker Image
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/studentreportsystem:latest .
+      run: docker build -t abdulkarim31662/studentreportsystem:latest .
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/studentreportsystem:latest
+      run: docker push abdulkarim31662/studentreportsystem:latest
+
